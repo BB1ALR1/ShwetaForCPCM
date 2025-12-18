@@ -19,7 +19,7 @@ After creating the repository, GitHub will show you commands. Use these commands
 cd "D:\Arya\Swetha for Cedar Park website\Website"
 
 # Add the remote repository (replace YOUR_USERNAME and REPO_NAME with your actual values)
-git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
+git remote add origin https://github.com/BB1ALR1/ShwetaForCPCM.git
 
 # Rename branch to main (if needed)
 git branch -M main
