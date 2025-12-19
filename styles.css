@@ -80,7 +80,7 @@ body {
 }
 
 .logo {
-    height: 200px;
+    height: 180px;
     width: auto;
     object-fit: contain;
 }
@@ -1449,6 +1449,7 @@ body {
 }
 
 .priority-card p {
+    font-size: 1.2rem;
     color: var(--text-light);
     line-height: 1.7;
 }
