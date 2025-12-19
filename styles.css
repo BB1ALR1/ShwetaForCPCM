@@ -22,6 +22,7 @@
 
 html {
     scroll-behavior: smooth;
+    zoom: 0.9;
 }
 
 body {
@@ -68,20 +69,22 @@ body {
 .header-container {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 15px;
+    gap: 0;
 }
 
 .logo-container {
     flex-shrink: 0;
+    margin-right: -60px;
+    margin-left: -20px;
 }
 
 .logo {
-    height: 120px;
-    width: auto;
+    height: 150px;
+    width: 400px;
     object-fit: contain;
 }
 
@@ -89,21 +92,25 @@ body {
     flex: 1;
     display: flex;
     justify-content: center;
+    transform: scale(0.8);
+    transform-origin: center;
+    margin-left: -60px;
+    margin-right: -40px;
 }
 
 .nav-list {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 18px;
     align-items: center;
     flex-wrap: nowrap;
 }
 
 .nav-link {
     text-decoration: none;
-    color: var(--text-dark);
-    font-weight: 500;
-    font-size: 14px;
+    color: #000000;
+    font-weight: 600;
+    font-size: 20px;
     letter-spacing: 0.5px;
     transition: color 0.3s ease;
     position: relative;
@@ -140,11 +147,11 @@ body {
 .donate-btn {
     background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
     color: var(--white);
-    padding: 14px 28px;
+    padding: 12px 24px;
     border-radius: 12px;
     text-decoration: none;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 0.5px;
     display: flex;
     align-items: center;
@@ -153,6 +160,10 @@ body {
     white-space: nowrap;
     box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-left: -20px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 10;
 }
 
 .donate-btn:hover {
@@ -212,7 +223,7 @@ body {
 
 .hero-title {
     font-size: 4.5rem;
-    font-weight: 800;
+    font-weight: 600;
     margin-bottom: 20px;
     line-height: 1.2;
 }
@@ -329,13 +340,13 @@ body {
 
 .split-hero-container {
     display: flex;
-    width: 100%;
-    min-height: 100%;
+    width: 85%; 
+    min-height: 70%;
     align-items: stretch;
 }
 
 .split-hero-left {
-    flex: 0 0 66.666%;
+    flex: 0 0 60%;
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
@@ -350,12 +361,12 @@ body {
 
 @media (min-width: 1400px) {
     .split-hero-left {
-        padding: 100px 80px;
+        padding: 60px 100px;
     }
 }
 
 .split-hero-right {
-    flex: 0 0 33.334%;
+    flex: 0 0 60%;
     background: linear-gradient(135deg, rgba(245, 247, 250, 0.9) 0%, rgba(232, 236, 241, 0.9) 100%);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -365,17 +376,16 @@ body {
     align-items: center;
     justify-content: flex-start;
     border-left: 1px solid rgba(255, 255, 255, 0.18);
-    padding-left: 0;
+    padding-right: 60px;
 }
 
 .candidate-photo {
     width: auto;
     height: 100%;
-    max-width: none;
+    max-width: 100%;
     object-fit: contain;
     object-position: left center;
     display: block;
-    margin-left: -100px;
 }
 
 .photo-placeholder {
@@ -392,7 +402,7 @@ body {
 }
 
 .split-hero-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 20px;
@@ -461,8 +471,8 @@ body {
 .form-group label {
     display: block;
     color: var(--text-dark);
-    font-size: 0.875rem;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 600;
     margin-bottom: 8px;
     letter-spacing: 0.2px;
 }
@@ -521,7 +531,7 @@ body {
 .btn-join {
     padding: 14px 28px;
     background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
-    color: var(--white);
+    color: #000000;
     border: none;
     border-radius: 12px;
     font-size: 1rem;
@@ -542,6 +552,7 @@ body {
 .btn-arrow {
     font-size: 1.1rem;
     font-weight: 400;
+    color: #000000;
 }
 
 .btn-join:hover {
@@ -679,8 +690,8 @@ body {
     line-height: 1.9;
     color: var(--text-dark);
     margin-bottom: 28px;
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left;
+    text-justify: auto;
 }
 
 .scrolling-quote {
@@ -1277,7 +1288,7 @@ body {
 
 /* Section Styles */
 .section {
-    padding: 100px 20px;
+    padding: 40px 20px;
 }
 
 .section-alt {
@@ -1288,7 +1299,7 @@ body {
     font-size: 3rem;
     font-weight: 700;
     color: var(--primary-blue);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: center;
     letter-spacing: -0.5px;
 }
@@ -1307,14 +1318,14 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
     gap: 50px;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 
 .content-block {
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    padding: 50px;
+    padding: 35px;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
@@ -1338,7 +1349,7 @@ body {
     font-size: 1.2rem;
     line-height: 1.8;
     color: var(--text-dark);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 /* Leadership Grid */
@@ -1422,6 +1433,8 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 35px;
     margin-top: 60px;
+    align-items: stretch;
+    grid-auto-rows: 1fr;
 }
 
 .priority-card {
@@ -1434,6 +1447,9 @@ body {
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
     text-align: center;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .priority-card:hover {
@@ -1452,12 +1468,15 @@ body {
     font-weight: 600;
     color: var(--primary-blue);
     margin-bottom: 15px;
+    flex-shrink: 0;
 }
 
 .priority-card p {
     font-size: 1.2rem;
     color: var(--text-light);
     line-height: 1.7;
+    flex-grow: 1;
+    margin: 0;
 }
 
 /* Endorsements & Events Placeholder */
@@ -1590,7 +1609,7 @@ body {
 }
 
 .footer-logo-img {
-    height: 140px;
+    height: 170px;
     width: auto;
     opacity: 1;
     object-fit: contain;

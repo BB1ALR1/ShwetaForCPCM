@@ -81,6 +81,10 @@ donateBtns.forEach(btn => {
 // Handle all volunteer button clicks
 volunteerBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
+        // If the button links to get-involved.html, allow normal navigation
+        if (btn.getAttribute('href') === 'get-involved.html' || btn.getAttribute('href')?.includes('get-involved.html')) {
+            return; // Allow default navigation
+        }
         e.preventDefault();
         if (volunteerModal) {
             volunteerModal.style.display = 'block';
@@ -94,19 +98,19 @@ modalClose.forEach(closeBtn => {
     closeBtn.addEventListener('click', () => {
         const modal = closeBtn.closest('.modal');
         if (modal) {
-            modal.style.display = 'none';
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        }
+    });
+    });
+
+// Close modal when clicking outside
+    window.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal')) {
+        e.target.style.display = 'none';
             document.body.style.overflow = 'auto';
         }
     });
-});
-
-// Close modal when clicking outside
-window.addEventListener('click', (e) => {
-    if (e.target.classList.contains('modal')) {
-        e.target.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-});
 
 // Header scroll effect
 let lastScroll = 0;
