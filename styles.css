@@ -80,7 +80,7 @@ body {
 }
 
 .logo {
-    height: 120px;
+    height: 200px;
     width: auto;
     object-fit: contain;
 }
@@ -1329,7 +1329,7 @@ body {
 }
 
 .content-block p {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     line-height: 1.8;
     color: var(--text-dark);
     margin-bottom: 15px;
@@ -1374,6 +1374,7 @@ body {
 }
 
 .leadership-card p {
+    font-size: 1.2rem;
     color: var(--text-light);
     line-height: 1.7;
 }
