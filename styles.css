@@ -41,6 +41,18 @@ body {
     padding: 0 40px;
 }
 
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
 @media (min-width: 1600px) {
     .container {
         max-width: 1500px;
@@ -1764,14 +1776,34 @@ body {
 }
 
 @media (max-width: 768px) {
+    html {
+        zoom: 1;
+    }
+    
     .header-container {
         flex-wrap: wrap;
+        padding: 0 15px;
+        gap: 10px;
+    }
+    
+    .logo-container {
+        margin-left: 0;
+        margin-right: 0;
+        order: 1;
+    }
+    
+    .logo {
+        height: 80px;
+        width: auto;
+        max-width: 200px;
     }
     
     .nav-menu {
         order: 3;
         width: 100%;
         display: none;
+        transform: none;
+        margin: 0;
     }
     
     .nav-menu.active {
@@ -1785,12 +1817,20 @@ body {
         align-items: flex-start;
     }
     
+    .nav-link {
+        font-size: 18px;
+    }
+    
     .mobile-menu-toggle {
         display: flex;
+        order: 2;
     }
     
     .donate-btn {
         order: 2;
+        margin-left: 0;
+        padding: 10px 20px;
+        font-size: 13px;
     }
     
     .hero {
@@ -1817,7 +1857,18 @@ body {
     
     .split-hero-right {
         flex: 1;
-        min-height: 400px;
+        min-height: 300px;
+        padding-right: 0;
+        padding: 20px;
+        justify-content: center;
+    }
+    
+    .candidate-photo {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+        object-position: center;
     }
     
     .split-hero-title {
@@ -1976,7 +2027,20 @@ body {
     }
     
     .content-block {
-        padding: 30px 20px;
+        padding: 25px 15px;
+    }
+    
+    .section {
+        padding: 40px 20px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    
+    body {
+        font-size: 16px;
     }
     
     .leadership-grid,
@@ -1992,6 +2056,25 @@ body {
 }
 
 @media (max-width: 480px) {
+    html {
+        zoom: 1;
+    }
+    
+    .header-container {
+        padding: 0 10px;
+    }
+    
+    .logo {
+        height: 60px;
+        width: auto;
+        max-width: 150px;
+    }
+    
+    .donate-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    
     .hero-title {
         font-size: 1.8rem;
     }
@@ -2001,43 +2084,44 @@ body {
     }
     
     .split-hero-left {
-        padding: 60px 30px;
+        padding: 40px 20px;
+    }
+    
+    .split-hero-right {
+        min-height: 250px;
+        padding: 15px;
+    }
+    
+    .candidate-photo {
+        max-height: 300px;
     }
     
     .split-hero-title {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
     
     .split-hero-hashtag {
-        font-size: 1.1rem;
-    }
-    
-    .split-hero-subtitle {
         font-size: 1rem;
     }
     
-    .split-hero-title {
-        font-size: 1.8rem;
-    }
-    
     .split-hero-subtitle {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
     
     .landing-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .landing-heading {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
     
     .landing-quote {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
     .landing-text {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
     
     .hero-buttons {
@@ -2058,8 +2142,8 @@ body {
         text-align: center;
     }
     
-    .logo {
-        height: 60px;
+    .footer-logo-img {
+        height: 70px;
     }
 }
 
