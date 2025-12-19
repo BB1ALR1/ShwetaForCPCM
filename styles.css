@@ -360,15 +360,16 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     border-left: 1px solid rgba(255, 255, 255, 0.18);
+    margin-left: -80px;
 }
 
 .candidate-photo {
-    width: 100%;
+    width: 120%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: left center;
     display: block;
 }
 
@@ -386,7 +387,7 @@ body {
 }
 
 .split-hero-title {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 20px;
